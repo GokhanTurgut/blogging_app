@@ -1,5 +1,7 @@
 <h1>Hello, Rails!</h1>
+
 <h3>Articles<h3>
+
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -7,3 +9,5 @@
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Article", new_article_path %>
