@@ -1,6 +1,8 @@
-<h1>Hello, Rails!</h1>
+<h1>Hello, Rails!</h1><br/>
 
-<h3>Articles<h3>
+<h2>Articles<h2>
+
+<p>Our blog has <%= Article.public_count %> articles and counting!</p>
 
 <ul>
   <% @articles.each do |article| %>

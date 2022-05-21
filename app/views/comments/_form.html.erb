@@ -1,13 +1,24 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
+  <div>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
-  </p>
-  <p>
+  </div>
+
+  <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
-  </p>
-  <p>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
+
+  <div>
     <%= form.submit %>
-  </p>
+  </div>
+
+  <div>
+    <%= link_to 'Cancel', root_path %>
+  </div>
 <% end %>
